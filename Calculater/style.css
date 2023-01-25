@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@1,100&display=swap');
+
+
+html,body{
+
+    height: 100%;
+    width: 100%;
+    font-family: 'Jost', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+}
+.button{
+
+margin: 0 3px;
+    padding: 20px;
+    border: 2px black solid;
+    border-radius:  9px;
+    cursor: pointer;
+}
+
+.row{
+
+    margin: 8px;
+}
+.row input{
+    margin: 0;
+    padding: 10px 0px;
+    border: 2px solid black;
+ font-size: 20px;
+    border-radius: 5px;
+    font-family: 'Jost', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
