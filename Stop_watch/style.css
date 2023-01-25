@@ -1,0 +1,36 @@
+
+
+
+
+
+
+body {
+    background:rgb(255, 255, 1);
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    height:100%;
+    }
+
+    .wrapper{
+        width: 800px;
+        margin: 30px auto;
+        color:rgb(7, 4, 4);
+        text-align:center;
+    }
+
+button{
+    background:red;
+color:rgb(1, 0, 0);
+border: solid 1px rgb(0, 0, 0);
+text-decoration:none;
+cursor:pointer;
+font-size:1.2em;
+padding:18px 10px;
+width:180px;
+margin: 10px;
+outline: none;
+
+
+
+
+
+}
