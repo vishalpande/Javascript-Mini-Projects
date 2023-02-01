@@ -5,21 +5,48 @@
 <title>Scoped CSS variable and JS</title>
 </head>
 <body>
-<h2>Updated CSS variables with<span class="h1">JS</span></h2>
+<h3>Updated CSS variables with <span class="h1">JS</span></h3>
 <div class="controls">
-    <label for="spacing">Spacing:</label>
+    <label for="spacing">Spacing :</label>
     <input type="range" name="spacing" value="10" min="10" max="200" data-sizing="px">
 
-    <label for="blur">Blur:</label>
+    <label for="blur">Blur :</label>
     <input type="range" name="blur" value="10" min="0" max="25" data-sizing="px">
 
-    <label for="base">Base Control</label>
+    <label for="base">Base Control :</label>
     <input type="color" name="base" value="#ffc600">
     </div>
 
 
-    <img src="img/img1.jpg">
+    <img src="img/img1.jpg" height="500px" width="700px">
+
+<style>
+
+body{
+    text-align: center;
+}
+body{
+    background: #193549;
+    color: white;
+    font-family: 'helvetica neue', sans-serif;
+    font-weight:100px;
+    font-size:50px;
+
+}
+.controls{
+
+margin-bottom: 50px;
+
+}
+a {
+    color: var(--base);
+    text-decoration: none;
+}
+input{
+width: 100px;
+}
 
 
+</style>
 </body>
 </html>
