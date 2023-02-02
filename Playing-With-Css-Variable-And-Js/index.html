@@ -64,15 +64,15 @@ width: 100px;
 }
 </style>
 <script>
-const input = document.querySelectorAll('.controls input');
+const inputs = document.querySelectorAll('.controls input');
 
 function hadndleUpdate(){
     const suffix=this.dataset.sizing || '';
 document.documentElement.style.setProperty('--${this.name}',this.value + suffix);
-console.log(suffix);
+   
 }
-input.forEach(functioninput => input.addEventListener('change', hadndleUpdate));
-input.forEach(functioninput => input.addEventListener('mousemove', hadndleUpdate));
+inputs.forEach(input => input.addEventListener('change', hadndleUpdate));
+inputs.forEach(input => input.addEventListener('mousemove', hadndleUpdate));
 
 
 </script>
