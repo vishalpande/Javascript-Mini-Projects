@@ -1,80 +1,89 @@
 <!DOCTYPE html>
-<html lang="en" >
-    <head>
-        <meta charset="utf-8" />
-<title>Scoped CSS variable and JS</title>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Scoped CSS variable and JS</title>
 </head>
+
 <body>
-<h3>Updated CSS variables with <span class="h1">JS</span></h3>
-<div class="controls">
-    <label for="spacing">Spacing :</label>
-    <input type="range" name="spacing" value="10" min="10" max="200" data-sizing="px">
+    <h3>Updated CSS variables with <span class="h1">JS</span></h3>
+    <div class="controls">
+        <label for="spacing">Spacing :</label>
+        <input type="range" name="spacing" value="10" min="10" max="200" data-sizing="px">
 
-    <label for="blur">Blur :</label>
-    <input type="range" name="blur" value="10" min="0" max="25" data-sizing="px">
+        <label for="blur">Blur :</label>
+        <input type="range" name="blur" value="10" min="0" max="25" data-sizing="px">
 
-    <label for="base">Base Control :</label>
-    <input type="color" name="base" value="#ffc600">
+        <label for="base">Base Control :</label>
+        <input type="color" name="base" value="#ffc600">
     </div>
 
 
     <img src="img/img1.jpg" height="500px" width="700px">
 
-<style>
-    :root{
+    <style>
+        :root {
 
---base:#ffc600;
---spacing:10px;
---blur:10px;
+            --base: #ffc600;
+            --spacing: 10px;
+            --blur: 10px;
 
-    }
-    img{
-        padding: var(--spacing);
-        background: var(--base);
-        filter: blur(var(--blur));
-    }
-    .h1{
-        color: var(--base);
+        }
 
+        img {
+            padding: var(--spacing);
+            background: var(--base);
+            filter: blur(var(--blur));
+        }
 
-    }
-
-body{
-    text-align: center;
-}
-body{
-    background: #193549;
-    color: white;
-    font-family: 'helvetica neue', sans-serif;
-    font-weight:100px;
-    font-size:50px;
-
-}
-.controls{
-
-margin-bottom: 50px;
-
-}
-a {
-    color: var(--base);
-    text-decoration: none;
-}
-input{
-width: 100px;
-}
-</style>
-<script>
-const inputs = document.querySelectorAll('.controls input');
-
-function hadndleUpdate(){
-    const suffix=this.dataset.sizing || '';
-document.documentElement.style.setProperty("--${this.name}",this.value + suffix);
-   
-}
-inputs.forEach(input => input.addEventListener('change', hadndleUpdate));
-inputs.forEach(input => input.addEventListener('mousemove', hadndleUpdate));
+        .h1 {
+            color: var(--base);
 
 
-</script>
+        }
+
+        body {
+            text-align: center;
+        }
+
+        body {
+            background: #193549;
+            color: white;
+            font-family: 'helvetica neue', sans-serif;
+            font-weight: 100px;
+            font-size: 50px;
+
+        }
+
+        .controls {
+
+            margin-bottom: 50px;
+
+        }
+
+        a {
+            color: var(--base);
+            text-decoration: none;
+        }
+
+        input {
+            width: 100px;
+        }
+    </style>
+    <script>
+        const inputs = document.querySelectorAll('.controls input');
+
+        function hadndleUpdate() {
+            const suffix = this.dataset.sizing || '';
+            document.documentElement.style.setProperty("--${this.name}", this.value + suffix);
+
+        }
+        inputs.forEach(input => input.addEventListener('change', hadndleUpdate));
+        inputs.forEach(input => input.addEventListener('mousemove', hadndleUpdate));
+
+
+    </script>
 </body>
+
 </html>
