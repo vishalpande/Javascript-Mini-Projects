@@ -12799,7 +12799,7 @@
                 }
             });
 
-            // Create scrollLeft and scrollTop methods
+
             jQuery.each({ scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function (method, prop) {
                 var top = "pageYOffset" === prop;
 
@@ -12824,12 +12824,6 @@
                 };
             });
 
-            // Support: Safari<7+, Chrome<37+
-            // Add the top/left cssHooks using jQuery.fn.position
-            // Webkit bug: https://bugs.webkit.org/show_bug.cgi?id=29084
-            // Blink bug: https://code.google.com/p/chromium/issues/detail?id=229280
-            // getComputedStyle returns percent when specified for top/left/bottom/right;
-            // rather than make the css module depend on the offset module, just check for it here
             jQuery.each(["top", "left"], function (i, prop) {
                 jQuery.cssHooks[prop] = addGetHookIf(support.pixelPosition,
                     function (elem, computed) {
