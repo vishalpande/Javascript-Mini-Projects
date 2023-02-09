@@ -103,9 +103,3 @@
 
 
 
-
-      const  i  =  {}
-      i.am      =  'A Front end Developer'
-      i.usedTo  =  ['Git hub' , 'Linkedin' , 'Vs-Code']
-      i.love    =  ['React', 'Html','Css','Javascript','Meaningful challenges']
-      i.aspire  =  'To inspire others and change the world'
