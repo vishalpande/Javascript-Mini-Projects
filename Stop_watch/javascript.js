@@ -20,7 +20,7 @@ clearInterval(interval);
  buttonStop.onclick=function() {
     clearInterval(interval);
  }
-buttonReset.onclick=function() {
+buttonReset.onclick=function(){
 clearInterval(interval);
 tens=00;
 seconds=00;
